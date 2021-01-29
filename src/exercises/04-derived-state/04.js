@@ -8,11 +8,13 @@ import styles from "../Exercise.module.css";
 export default function App() {
   const [counter, setCounter] = useState(0);
 
+  const isEven = counter % 2 === 0;
+
   return (
     <>
       <h1>Exercise 4</h1>
       {/* 🌟 [01] - Add a CSS style to the div below so the backgroundColor changes depending on `counter` being even or odd. */}
-      <div>
+      <div style={{ backgroundColor: isEven ? "Green" : "Red" }}>
         <button className={styles.btn} onClick={() => setCounter(counter - 1)}>
           -
         </button>
